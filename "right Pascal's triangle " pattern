@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+void pascal_triangle(int n){
+  for (int i=1;i<=2*n-1;i++){
+    int k;
+    if(i<=n) k=i;
+    else if(i>n) k=2*n-i;
+    int flag=1;
+    if (i%2==0) flag=0;
+    else flag=1;
+    for(int j=1;j<=k;j++){
+        if(flag==1) cout<<"* ";
+        else cout<<"  ";
+        flag=1-flag;
+    
+        
+    }
+    cout<<endl<<endl;    
+   
+  }
+  
+}
+int main(){
+  pascal_triangle();
+  return 0;
+}
